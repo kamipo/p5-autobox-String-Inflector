@@ -4,6 +4,26 @@ use strict;
 use warnings;
 our $VERSION = '0.01';
 
+use base qw(autobox);
+
+sub import {
+    shift->SUPER::import(STRING => 'autobox::String::Inflector::Impl', @_);
+}
+
+package # hide from pause
+    autobox::String::Inflector::Impl;
+
+use String::CamelCase qw(camelize decamelize);
+use Lingua::EN::Inflect::Number;
+
+*pluralize = \&Lingua::EN::Inflect::Number::to_PL;
+
+sub singularize {
+    local $_ = shift;
+    return $_ if s/(alias|status)es$/$1/i;
+    return Lingua::EN::Inflect::Number::to_S($_);
+}
+
 1;
 __END__
 

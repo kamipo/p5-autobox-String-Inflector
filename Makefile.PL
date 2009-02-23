@@ -2,7 +2,9 @@ use inc::Module::Install;
 name 'autobox-String-Inflector';
 all_from 'lib/autobox/String/Inflector.pm';
 
-# requires '';
+requires 'autobox';
+requires 'String::CamelCase';
+requires 'Lingua::EN::Inflect::Number';
 
 tests 't/*.t';
 author_tests 'xt';
