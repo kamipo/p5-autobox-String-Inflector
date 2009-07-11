@@ -14,7 +14,7 @@ package # hide from pause
     autobox::String::Inflector::Impl;
 
 use String::CamelCase qw(camelize decamelize);
-use Lingua::EN::Inflect::Number;
+use Lingua::EN::Inflect::Number ();
 
 *pluralize = \&Lingua::EN::Inflect::Number::to_PL;
 
@@ -29,15 +29,19 @@ __END__
 
 =head1 NAME
 
-autobox::String::Inflector -
+autobox::String::Inflector - Rails like String Inflector
 
 =head1 SYNOPSIS
 
   use autobox::String::Inflector;
 
+  print 'users'->singularize->camelize; # User
+
+  print 'Status'->decamelize->pluralize; # statuses
+
 =head1 DESCRIPTION
 
-autobox::String::Inflector is
+autobox::String::Inflector is Rails like String Inflector.
 
 =head1 AUTHOR
 
