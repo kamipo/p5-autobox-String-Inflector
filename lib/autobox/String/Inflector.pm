@@ -37,7 +37,7 @@ autobox::String::Inflector - Rails like String Inflector
 
   print 'users'->singularize->camelize; # User
 
-  print 'Status'->decamelize->pluralize; # statuses
+  print 'Entry'->decamelize->pluralize; # entries
 
 =head1 DESCRIPTION
 
