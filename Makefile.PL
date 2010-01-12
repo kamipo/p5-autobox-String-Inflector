@@ -6,6 +6,8 @@ requires 'autobox';
 requires 'String::CamelCase';
 requires 'Lingua::EN::Inflect::Number';
 
+test_requires 'Test::More' => 0.88; # done_testing()
+
 tests 't/*.t';
 author_tests 'xt';
 
