@@ -6,12 +6,12 @@ requires 'autobox';
 requires 'String::CamelCase';
 requires 'Lingua::EN::Inflect::Number';
 
-test_requires 'Test::More' => 0.88; # done_testing()
+test_requires 'Test::More', 0.96;
 
 tests 't/*.t';
 author_tests 'xt';
 
-build_requires 'Test::More';
-use_test_base;
-auto_include;
+repository 'https://github.com/xaicron/p5-autobox-String-Inflector';
+bugtracker 'https://github.com/xaicron/p5-autobox-String-Inflector/issues';
+
 WriteAll;
