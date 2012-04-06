@@ -11,7 +11,7 @@ test_requires 'Test::More', 0.96;
 tests 't/*.t';
 author_tests 'xt';
 
-repository 'https://github.com/xaicron/p5-autobox-String-Inflector';
-bugtracker 'https://github.com/xaicron/p5-autobox-String-Inflector/issues';
+repository 'https://github.com/kamipo/p5-autobox-String-Inflector';
+bugtracker 'https://github.com/kamipo/p5-autobox-String-Inflector/issues';
 
 WriteAll;
